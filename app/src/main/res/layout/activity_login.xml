@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New User"
+            android:text="Welcome Back"
             android:textSize="42sp"
             android:textColor="#FFBD4D"
             android:textStyle="bold">
@@ -37,7 +37,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nice To See You Here"
+            android:text="Nice To Have You Back!"
             android:textSize="23sp"
             android:textColor="#FF8596">
 
@@ -104,10 +104,10 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="8dp"
-            android:text="Sign Up"
+            android:text="Login"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"></TextView>
+            android:textSize="18sp"
+            android:textStyle="bold"/>
 
     </RelativeLayout>
 
@@ -120,9 +120,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="70dp"
         android:layout_marginRight="20dp"
-        android:text="Want To Login ?"
+        android:text="Don't have account ?\nCreate an account!"
         android:textAlignment="center"
-        android:textColor="@color/black"></TextView>
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
 
 
 </RelativeLayout>
