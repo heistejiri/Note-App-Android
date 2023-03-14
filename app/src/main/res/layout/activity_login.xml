@@ -57,7 +57,7 @@
         >
 
         <EditText
-            android:id="@+id/signupemail"
+            android:id="@+id/loginemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Your Email"
@@ -79,7 +79,7 @@
         >
 
         <EditText
-            android:id="@+id/signuppassword"
+            android:id="@+id/loginpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Your Password"
@@ -90,7 +90,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/signup"
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/password"
@@ -116,13 +116,13 @@
         android:id="@+id/gotologin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signup"
+        android:layout_below="@id/login"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="70dp"
         android:layout_marginRight="20dp"
         android:text="Don't have account ?\nCreate an account!"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textColor="@color/black"/>
 
 
