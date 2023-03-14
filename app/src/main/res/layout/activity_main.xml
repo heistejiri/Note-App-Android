@@ -9,17 +9,15 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-
         android:id="@+id/createnotefab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom|end"
         android:background="#A1F4FB"
         android:src="@drawable/ic_baseline_add_24"
         app:layout_constraintBottom_toBottomOf="@+id/recyclerview"
-
         app:layout_constraintEnd_toEndOf="@+id/recyclerview"
         app:layout_constraintHorizontal_bias="0.907"
         app:layout_constraintStart_toStartOf="@+id/recyclerview"
