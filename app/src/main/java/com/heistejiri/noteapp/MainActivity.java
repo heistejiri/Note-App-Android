@@ -307,4 +307,83 @@ public class MainActivity extends AppCompatActivity {
         mrecyclerview.setAdapter(noteAdapter);
 
     }
+
+    public class NoteViewHolder extends RecyclerView.ViewHolder
+    {
+        private TextView notetitle;
+        private TextView notecontent;
+        LinearLayout mnote;
+
+        public NoteViewHolder(@NonNull View itemView) {
+            super(itemView);
+            notetitle=itemView.findViewById(R.id.notetitle);
+            notecontent=itemView.findViewById(R.id.notecontent);
+            mnote=itemView.findViewById(R.id.note);
+
+            //Animate Recyclerview
+            Animation translate_anim = AnimationUtils.loadAnimation(itemView.getContext(), R.anim.translate_anim);
+            mnote.setAnimation(translate_anim);
+        }
+    }
+
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId())
+        {
+            case R.id.logout:
+                firebaseAuth.signOut();
+                finish();
+                startActivity(new Intent(notesactivity.this,MainActivity.class));
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        noteAdapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(noteAdapter!=null)
+        {
+            noteAdapter.stopListening();
+        }
+    }
+
+
+    private int getRandomColor()
+    {
+        List<Integer> colorcode=new ArrayList<>();
+        colorcode.add(R.color.gray);
+        colorcode.add(R.color.pink);
+        colorcode.add(R.color.lightgreen);
+        colorcode.add(R.color.skyblue);
+        colorcode.add(R.color.color1);
+        colorcode.add(R.color.color2);
+        colorcode.add(R.color.color3);
+
+        colorcode.add(R.color.color4);
+        colorcode.add(R.color.color5);
+        colorcode.add(R.color.green);
+
+        Random random=new Random();
+        int number=random.nextInt(colorcode.size());
+        return colorcode.get(number);
+    }
 }
