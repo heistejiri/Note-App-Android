@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                         popupMenu.getMenu().add("Delete").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem item) {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(notesactivity.this);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                                 builder.setTitle("Delete");
                                 builder.setMessage("Are you sure you want to delete?");
                                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
