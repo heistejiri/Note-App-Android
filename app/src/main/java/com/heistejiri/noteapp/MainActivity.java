@@ -344,7 +344,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.logout:
                 firebaseAuth.signOut();
                 finish();
-                startActivity(new Intent(notesactivity.this,MainActivity.class));
+                startActivity(new Intent(MainActivity.this,LoginActivity.class));
         }
 
         return super.onOptionsItemSelected(item);
